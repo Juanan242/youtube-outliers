@@ -80,24 +80,3 @@ python -m http.server 8000
 ```
 
 4. Abre `http://localhost:8000` en el navegador.
-
-## API keys
-
-`js/config.example.js` es una plantilla segura para la configuración local. El archivo `js/config.js`, que contiene las claves reales, está excluido mediante `.gitignore` y no debe subirse al repositorio.
-
-La aplicación utiliza las claves desde el frontend para ejecución local. Cualquier clave entregada al navegador puede ser inspeccionada por el usuario, por lo que una futura versión pública debería gestionar las llamadas mediante un backend o proxy.
-
-## Limitaciones
-
-- La aplicación depende de la cuota y disponibilidad de YouTube Data API v3.
-- Las API keys deben configurarse manualmente para ejecutar búsquedas reales.
-- Las claves usadas en frontend no pueden mantenerse completamente secretas.
-- Algunos canales pueden ocultar suscriptores o no proporcionar datos suficientes para el análisis de Gemas Ocultas.
-- Los resultados dependen de los metadatos y estadísticas disponibles en YouTube.
-
-## Posibles mejoras
-
-- Mover las llamadas de YouTube a un backend o proxy.
-- Añadir caché persistente y una supervisión más visible de la cuota.
-- Incorporar más métricas y algoritmos de análisis.
-- Ampliar las pruebas automatizadas y preparar un flujo de despliegue.
